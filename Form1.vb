@@ -52,6 +52,8 @@
 
 
 
+
+
     End Sub
 
     Private Sub Lresultado_Click(sender As Object, e As EventArgs)
@@ -104,6 +106,36 @@
         numero2 = Num2.Text
 
         resultado = numero1 / numero2
+        Lresulado.Text = Math.Round(resultado, 3)
+
+
+
+
+
+    End Sub
+
+    Private Sub BtnLimpiar_Click(sender As Object, e As EventArgs)
+        Num1.Clear()
+        Num2.Clear()
+
+
+    End Sub
+
+    Private Sub BtnLimpieza_Click(sender As Object, e As EventArgs) Handles BtnLimpieza.Click
+        Num1.Clear()
+        Num2.Clear()
+
+
+    End Sub
+
+    Private Sub BtnResiduo_Click(sender As Object, e As EventArgs) Handles BtnResiduo.Click
+        Dim numero1, numero2 As Decimal
+
+        numero1 = Num1.Text
+        numero2 = Num2.Text
+
+        resultado = numero1 Mod numero2
+
         Lresulado.Text = resultado
 
 

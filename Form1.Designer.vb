@@ -29,6 +29,7 @@ Partial Class Form1
         Button2 = New Button()
         Label2 = New Label()
         Panel1 = New Panel()
+        BtnLimpieza = New Button()
         Lresulado = New Label()
         BtnSuma = New Button()
         BtnResta = New Button()
@@ -39,6 +40,7 @@ Partial Class Form1
         Label5 = New Label()
         Label4 = New Label()
         Label3 = New Label()
+        BtnResiduo = New Button()
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -102,6 +104,8 @@ Partial Class Form1
         ' Panel1
         ' 
         Panel1.BackColor = SystemColors.GradientActiveCaption
+        Panel1.Controls.Add(BtnResiduo)
+        Panel1.Controls.Add(BtnLimpieza)
         Panel1.Controls.Add(Lresulado)
         Panel1.Controls.Add(BtnSuma)
         Panel1.Controls.Add(BtnResta)
@@ -114,8 +118,18 @@ Partial Class Form1
         Panel1.Controls.Add(Label3)
         Panel1.Location = New Point(474, 6)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(479, 228)
+        Panel1.Size = New Size(479, 255)
         Panel1.TabIndex = 6
+        ' 
+        ' BtnLimpieza
+        ' 
+        BtnLimpieza.ForeColor = Color.IndianRed
+        BtnLimpieza.Location = New Point(22, 197)
+        BtnLimpieza.Name = "BtnLimpieza"
+        BtnLimpieza.Size = New Size(127, 29)
+        BtnLimpieza.TabIndex = 14
+        BtnLimpieza.Text = "Limpieza" & vbCrLf
+        BtnLimpieza.UseVisualStyleBackColor = True
         ' 
         ' Lresulado
         ' 
@@ -214,6 +228,16 @@ Partial Class Form1
         Label3.TabIndex = 7
         Label3.Text = "Operaciones Basicas"
         ' 
+        ' BtnResiduo
+        ' 
+        BtnResiduo.ForeColor = Color.IndianRed
+        BtnResiduo.Location = New Point(336, 214)
+        BtnResiduo.Name = "BtnResiduo"
+        BtnResiduo.Size = New Size(127, 29)
+        BtnResiduo.TabIndex = 15
+        BtnResiduo.Text = "Residuo"
+        BtnResiduo.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8.0F, 20.0F)
@@ -253,5 +277,7 @@ Partial Class Form1
     Friend WithEvents BtnMultiplicacion As Button
     Friend WithEvents BtnDivision As Button
     Friend WithEvents Lresulado As Label
+    Friend WithEvents BtnLimpieza As Button
+    Friend WithEvents BtnResiduo As Button
 
 End Class
