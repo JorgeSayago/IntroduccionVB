@@ -10,7 +10,12 @@
 
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Instruccion1.Click
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Label2.Text = TextBox1.Text
 
     End Sub
 End Class
