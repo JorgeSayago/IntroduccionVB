@@ -63,8 +63,8 @@
     Private Sub BtnResta_Click(sender As Object, e As EventArgs) Handles BtnResta.Click
         Dim numero1, numero2 As Decimal
 
-        numero1 = Num1.Text()
-        numero2 = Num2.Text()
+        numero1 = Num1.Text
+        numero2 = Num2.Text
 
         resultado = numero1 - numero2
 
@@ -141,6 +141,30 @@
 
 
 
+
+    End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub BtnEvaluar_Click(sender As Object, e As EventArgs) Handles BtnEvaluar.Click
+        If CalBox.Text > 5 Then
+            Lcalificacion.Text = " APROBADO"
+            Lcalificacion.ForeColor = Color.Green
+        Else
+            Lcalificacion.Text = " REPROBADO"
+            Lcalificacion.ForeColor = Color.Red
+
+        End If
 
     End Sub
 End Class

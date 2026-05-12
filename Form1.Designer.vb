@@ -29,6 +29,7 @@ Partial Class Form1
         Button2 = New Button()
         Label2 = New Label()
         Panel1 = New Panel()
+        BtnResiduo = New Button()
         BtnLimpieza = New Button()
         Lresulado = New Label()
         BtnSuma = New Button()
@@ -40,8 +41,14 @@ Partial Class Form1
         Label5 = New Label()
         Label4 = New Label()
         Label3 = New Label()
-        BtnResiduo = New Button()
+        Panel2 = New Panel()
+        Lcalificacion = New Label()
+        BtnEvaluar = New Button()
+        CalBox = New ComboBox()
+        Label7 = New Label()
+        Label6 = New Label()
         Panel1.SuspendLayout()
+        Panel2.SuspendLayout()
         SuspendLayout()
         ' 
         ' Button1
@@ -116,10 +123,20 @@ Partial Class Form1
         Panel1.Controls.Add(Label5)
         Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(Label3)
-        Panel1.Location = New Point(474, 6)
+        Panel1.Location = New Point(491, 11)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(479, 255)
+        Panel1.Size = New Size(479, 262)
         Panel1.TabIndex = 6
+        ' 
+        ' BtnResiduo
+        ' 
+        BtnResiduo.ForeColor = Color.IndianRed
+        BtnResiduo.Location = New Point(336, 214)
+        BtnResiduo.Name = "BtnResiduo"
+        BtnResiduo.Size = New Size(127, 29)
+        BtnResiduo.TabIndex = 15
+        BtnResiduo.Text = "Residuo"
+        BtnResiduo.UseVisualStyleBackColor = True
         ' 
         ' BtnLimpieza
         ' 
@@ -228,22 +245,76 @@ Partial Class Form1
         Label3.TabIndex = 7
         Label3.Text = "Operaciones Basicas"
         ' 
-        ' BtnResiduo
+        ' Panel2
         ' 
-        BtnResiduo.ForeColor = Color.IndianRed
-        BtnResiduo.Location = New Point(336, 214)
-        BtnResiduo.Name = "BtnResiduo"
-        BtnResiduo.Size = New Size(127, 29)
-        BtnResiduo.TabIndex = 15
-        BtnResiduo.Text = "Residuo"
-        BtnResiduo.UseVisualStyleBackColor = True
+        Panel2.BackColor = SystemColors.ControlLight
+        Panel2.Controls.Add(Lcalificacion)
+        Panel2.Controls.Add(BtnEvaluar)
+        Panel2.Controls.Add(CalBox)
+        Panel2.Controls.Add(Label7)
+        Panel2.Controls.Add(Label6)
+        Panel2.Location = New Point(0, 272)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(491, 255)
+        Panel2.TabIndex = 16
+        ' 
+        ' Lcalificacion
+        ' 
+        Lcalificacion.AutoSize = True
+        Lcalificacion.Location = New Point(126, 90)
+        Lcalificacion.Name = "Lcalificacion"
+        Lcalificacion.Size = New Size(0, 20)
+        Lcalificacion.TabIndex = 20
+        ' 
+        ' BtnEvaluar
+        ' 
+        BtnEvaluar.ForeColor = Color.DarkBlue
+        BtnEvaluar.Location = New Point(306, 41)
+        BtnEvaluar.Name = "BtnEvaluar"
+        BtnEvaluar.Size = New Size(108, 29)
+        BtnEvaluar.TabIndex = 19
+        BtnEvaluar.Text = "Evaluar"
+        BtnEvaluar.UseVisualStyleBackColor = True
+        ' 
+        ' CalBox
+        ' 
+        CalBox.FormattingEnabled = True
+        CalBox.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
+        CalBox.Location = New Point(126, 44)
+        CalBox.Name = "CalBox"
+        CalBox.Size = New Size(115, 28)
+        CalBox.TabIndex = 18
+        CalBox.Text = "0"
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Sitka Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.ForeColor = Color.Sienna
+        Label7.Location = New Point(12, 44)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(108, 42)
+        Label7.TabIndex = 17
+        Label7.Text = "Calificacion: " & vbCrLf & vbCrLf
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Sitka Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.ForeColor = Color.Black
+        Label6.Location = New Point(174, 9)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(98, 21)
+        Label6.TabIndex = 16
+        Label6.Text = "Calificacion" & vbCrLf
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonFace
-        ClientSize = New Size(949, 364)
+        ClientSize = New Size(968, 528)
+        Controls.Add(Panel2)
         Controls.Add(Panel1)
         Controls.Add(Label2)
         Controls.Add(Button2)
@@ -256,6 +327,8 @@ Partial Class Form1
         Text = "Solucion 1"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -279,5 +352,11 @@ Partial Class Form1
     Friend WithEvents Lresulado As Label
     Friend WithEvents BtnLimpieza As Button
     Friend WithEvents BtnResiduo As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents CalBox As ComboBox
+    Friend WithEvents BtnEvaluar As Button
+    Friend WithEvents Lcalificacion As Label
 
 End Class
