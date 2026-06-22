@@ -42,13 +42,29 @@ Partial Class Form1
         Label4 = New Label()
         Label3 = New Label()
         Panel2 = New Panel()
+        GroupBox1 = New GroupBox()
+        LTotal = New Label()
+        Ltriple = New Label()
+        Ldoble = New Label()
+        Lnormal = New Label()
+        Button3 = New Button()
+        Label13 = New Label()
+        Label12 = New Label()
+        Label11 = New Label()
+        Label10 = New Label()
+        TxtCostoHora = New TextBox()
+        Label9 = New Label()
+        TxtHora = New TextBox()
+        Label8 = New Label()
         Lcalificacion = New Label()
         BtnEvaluar = New Button()
         CalBox = New ComboBox()
         Label7 = New Label()
         Label6 = New Label()
+        FooterPanel = New Panel()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
+        GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
         ' Button1
@@ -73,7 +89,7 @@ Partial Class Form1
         ' Instruccion1
         ' 
         Instruccion1.AutoSize = True
-        Instruccion1.Font = New Font("Sitka Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Instruccion1.Font = New Font("Sitka Text", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Instruccion1.ForeColor = Color.Black
         Instruccion1.Location = New Point(12, 63)
         Instruccion1.Name = "Instruccion1"
@@ -101,7 +117,7 @@ Partial Class Form1
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Sitka Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Sitka Text", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.Black
         Label2.Location = New Point(43, 147)
         Label2.Name = "Label2"
@@ -123,9 +139,9 @@ Partial Class Form1
         Panel1.Controls.Add(Label5)
         Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(Label3)
-        Panel1.Location = New Point(491, 11)
+        Panel1.Location = New Point(497, 1)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(479, 262)
+        Panel1.Size = New Size(538, 273)
         Panel1.TabIndex = 6
         ' 
         ' BtnResiduo
@@ -151,7 +167,7 @@ Partial Class Form1
         ' Lresulado
         ' 
         Lresulado.AutoSize = True
-        Lresulado.Font = New Font("Sitka Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Lresulado.Font = New Font("Sitka Text", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Lresulado.ForeColor = Color.Black
         Lresulado.Location = New Point(77, 141)
         Lresulado.Name = "Lresulado"
@@ -237,7 +253,7 @@ Partial Class Form1
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Sitka Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Sitka Text", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.Black
         Label3.Location = New Point(12, 4)
         Label3.Name = "Label3"
@@ -248,15 +264,167 @@ Partial Class Form1
         ' Panel2
         ' 
         Panel2.BackColor = SystemColors.ControlLight
+        Panel2.Controls.Add(GroupBox1)
         Panel2.Controls.Add(Lcalificacion)
         Panel2.Controls.Add(BtnEvaluar)
         Panel2.Controls.Add(CalBox)
         Panel2.Controls.Add(Label7)
         Panel2.Controls.Add(Label6)
-        Panel2.Location = New Point(0, 272)
+        Panel2.Location = New Point(0, 271)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(491, 255)
+        Panel2.Size = New Size(498, 467)
         Panel2.TabIndex = 16
+        ' 
+        ' GroupBox1
+        ' 
+        GroupBox1.BackColor = SystemColors.GradientInactiveCaption
+        GroupBox1.Controls.Add(LTotal)
+        GroupBox1.Controls.Add(Ltriple)
+        GroupBox1.Controls.Add(Ldoble)
+        GroupBox1.Controls.Add(Lnormal)
+        GroupBox1.Controls.Add(Button3)
+        GroupBox1.Controls.Add(Label13)
+        GroupBox1.Controls.Add(Label12)
+        GroupBox1.Controls.Add(Label11)
+        GroupBox1.Controls.Add(Label10)
+        GroupBox1.Controls.Add(TxtCostoHora)
+        GroupBox1.Controls.Add(Label9)
+        GroupBox1.Controls.Add(TxtHora)
+        GroupBox1.Controls.Add(Label8)
+        GroupBox1.Location = New Point(0, 142)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Size = New Size(498, 322)
+        GroupBox1.TabIndex = 21
+        GroupBox1.TabStop = False
+        GroupBox1.Text = "Salario"
+        ' 
+        ' LTotal
+        ' 
+        LTotal.AutoSize = True
+        LTotal.Font = New Font("Times New Roman", 9F, FontStyle.Bold)
+        LTotal.ForeColor = Color.DarkSlateBlue
+        LTotal.Location = New Point(136, 279)
+        LTotal.Name = "LTotal"
+        LTotal.Size = New Size(0, 17)
+        LTotal.TabIndex = 26
+        ' 
+        ' Ltriple
+        ' 
+        Ltriple.AutoSize = True
+        Ltriple.Font = New Font("Times New Roman", 9F, FontStyle.Bold)
+        Ltriple.ForeColor = Color.DarkSlateBlue
+        Ltriple.Location = New Point(136, 243)
+        Ltriple.Name = "Ltriple"
+        Ltriple.Size = New Size(0, 17)
+        Ltriple.TabIndex = 25
+        ' 
+        ' Ldoble
+        ' 
+        Ldoble.AutoSize = True
+        Ldoble.Font = New Font("Times New Roman", 9F, FontStyle.Bold)
+        Ldoble.ForeColor = Color.DarkSlateBlue
+        Ldoble.Location = New Point(136, 205)
+        Ldoble.Name = "Ldoble"
+        Ldoble.Size = New Size(0, 17)
+        Ldoble.TabIndex = 24
+        ' 
+        ' Lnormal
+        ' 
+        Lnormal.AutoSize = True
+        Lnormal.Font = New Font("Times New Roman", 9F, FontStyle.Bold)
+        Lnormal.ForeColor = Color.DarkSlateBlue
+        Lnormal.Location = New Point(136, 166)
+        Lnormal.Name = "Lnormal"
+        Lnormal.Size = New Size(0, 17)
+        Lnormal.TabIndex = 23
+        ' 
+        ' Button3
+        ' 
+        Button3.ForeColor = Color.DarkBlue
+        Button3.Location = New Point(325, 139)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(108, 29)
+        Button3.TabIndex = 22
+        Button3.Text = "Cotizar" & vbCrLf
+        Button3.UseVisualStyleBackColor = True
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Font = New Font("Times New Roman", 9F, FontStyle.Bold)
+        Label13.ForeColor = Color.DarkSlateBlue
+        Label13.Location = New Point(45, 279)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(41, 17)
+        Label13.TabIndex = 7
+        Label13.Text = "Total" & vbCrLf
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Font = New Font("Times New Roman", 9F, FontStyle.Bold)
+        Label12.ForeColor = Color.DarkSlateBlue
+        Label12.Location = New Point(43, 243)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(54, 17)
+        Label12.TabIndex = 6
+        Label12.Text = "Triples"
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Times New Roman", 9F, FontStyle.Bold)
+        Label11.ForeColor = Color.DarkSlateBlue
+        Label11.Location = New Point(43, 205)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(54, 17)
+        Label11.TabIndex = 5
+        Label11.Text = "Dobles"
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Font = New Font("Times New Roman", 9F, FontStyle.Bold)
+        Label10.ForeColor = Color.DarkSlateBlue
+        Label10.Location = New Point(43, 166)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(56, 17)
+        Label10.TabIndex = 4
+        Label10.Text = "Normal"
+        ' 
+        ' TxtCostoHora
+        ' 
+        TxtCostoHora.Location = New Point(182, 80)
+        TxtCostoHora.Name = "TxtCostoHora"
+        TxtCostoHora.Size = New Size(125, 27)
+        TxtCostoHora.TabIndex = 3
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.ForeColor = Color.Maroon
+        Label9.Location = New Point(28, 83)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(114, 20)
+        Label9.TabIndex = 2
+        Label9.Text = "Costo por Hora:" & vbCrLf
+        ' 
+        ' TxtHora
+        ' 
+        TxtHora.Location = New Point(182, 38)
+        TxtHora.Name = "TxtHora"
+        TxtHora.Size = New Size(125, 27)
+        TxtHora.TabIndex = 1
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.ForeColor = Color.Maroon
+        Label8.Location = New Point(28, 39)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(131, 20)
+        Label8.TabIndex = 0
+        Label8.Text = "Horas Trabajadas: "
         ' 
         ' Lcalificacion
         ' 
@@ -289,7 +457,7 @@ Partial Class Form1
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Sitka Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Sitka Text", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.Sienna
         Label7.Location = New Point(12, 44)
         Label7.Name = "Label7"
@@ -300,7 +468,7 @@ Partial Class Form1
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Sitka Text", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Sitka Text", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.Black
         Label6.Location = New Point(174, 9)
         Label6.Name = "Label6"
@@ -308,12 +476,22 @@ Partial Class Form1
         Label6.TabIndex = 16
         Label6.Text = "Calificacion" & vbCrLf
         ' 
+        ' FooterPanel
+        ' 
+        FooterPanel.BackColor = SystemColors.Info
+        FooterPanel.Dock = DockStyle.Bottom
+        FooterPanel.Location = New Point(0, 741)
+        FooterPanel.Name = "FooterPanel"
+        FooterPanel.Size = New Size(1036, 120)
+        FooterPanel.TabIndex = 17
+        ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonFace
-        ClientSize = New Size(968, 528)
+        ClientSize = New Size(1036, 861)
+        Controls.Add(FooterPanel)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
         Controls.Add(Label2)
@@ -324,11 +502,13 @@ Partial Class Form1
         Controls.Add(Button1)
         ForeColor = Color.Coral
         Name = "Form1"
-        Text = "Solucion 1"
+        Text = "Ejercicios 1"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
+        GroupBox1.ResumeLayout(False)
+        GroupBox1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -358,5 +538,20 @@ Partial Class Form1
     Friend WithEvents CalBox As ComboBox
     Friend WithEvents BtnEvaluar As Button
     Friend WithEvents Lcalificacion As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TxtCostoHora As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents TxtHora As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Button3 As Button
+    Friend WithEvents LTotal As Label
+    Friend WithEvents Ltriple As Label
+    Friend WithEvents Ldoble As Label
+    Friend WithEvents Lnormal As Label
+    Friend WithEvents FooterPanel As Panel
 
 End Class

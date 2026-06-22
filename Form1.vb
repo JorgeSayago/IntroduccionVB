@@ -167,4 +167,48 @@
         End If
 
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        ' Menos de 40 horas de paga normal
+        ' Excedetes de 40 horas y menos de 50 horas se pagan el doble
+        ' Excedentes de 50 horas se pagan el triple
+        Dim horasDobles As Decimal
+        Dim total As Decimal
+        Dim horasTriples As Decimal
+
+
+
+        If TxtHora.Text <= 40 Then
+            total = TxtCostoHora.Text * TxtHora.Text
+
+            Lnormal.Text = Format(Math.Round(total, 2), "$ ###,##0.#0")
+            Ldoble.Text = Format(Math.Round(0, 2), "$ ###,##0.#0")
+            Ltriple.Text = Format(Math.Round(0, 2), "$ ###,##0.#0")
+            LTotal.Text = Format(Math.Round(total, 2), "$ ###,##0.#0")
+
+        ElseIf TxtHora.Text > 40 And TxtHora.Text < 50 Then
+            total = 40 * TxtCostoHora.Text
+            horasDobles = ((TxtHora.Text - 40) * TxtCostoHora.Text) * 2
+            resultado = total + horasDobles
+
+            Lnormal.Text = Format(Math.Round(total, 2), "$ ###,##0.#0")
+            Ldoble.Text = Format(Math.Round(horasDobles, 2), "$ ###,##0.#0")
+            Ltriple.Text = Format(Math.Round(0, 2), "$ ###,##0.#0")
+            LTotal.Text = Format(Math.Round(resultado, 2), "$ ###,##0.#0")
+        ElseIf TxtHora.Text >= 50 Then
+            total = 40 * TxtCostoHora.Text
+            horasDobles = (10 * TxtCostoHora.Text) * 2
+            horasTriples = ((TxtHora.Text - 50) * TxtCostoHora.Text) * 3
+            resultado = total + horasDobles + horasTriples
+
+            Lnormal.Text = Format(Math.Round(total, 2), "$ ###,##0.#0")
+            Ldoble.Text = Format(Math.Round(horasDobles, 2), "$ ###,##0.#0")
+            Ltriple.Text = Format(Math.Round(horasTriples, 2), "$ ###,##0.#0")
+            LTotal.Text = Format(Math.Round(resultado, 2), "$ ###,##0.#0")
+
+        End If
+
+
+
+    End Sub
 End Class
