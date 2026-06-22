@@ -73,16 +73,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
     End Sub
 
     Private Sub BtnMultiplicacion_Click(sender As Object, e As EventArgs) Handles BtnMultiplicacion.Click
@@ -212,9 +202,53 @@
 
     End Sub
 
+    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
+
+    End Sub
+
+    Private Sub RbtnCalcular_Click(sender As Object, e As EventArgs) Handles RbtnCalcular.Click
+        Dim RadioTotal As Decimal
+        Dim num1 As Decimal
+        Dim num2 As Decimal
+
+        If RbtnSuma.Checked Then
+            num1 = TbNum1.Text
+            num2 = TbnNum2.Text
+
+            RadioTotal = num1 + num2
+            RbResultado.Text = Format(Math.Round(RadioTotal, 2), "###,##0.#0")
+        ElseIf RbtnResta.Checked Then
+            num1 = TbNum1.Text
+            num2 = TbnNum2.Text
+            RadioTotal = num1 - num2
+            RbResultado.Text = Format(Math.Round(RadioTotal, 2), "###,##0.#0")
+        ElseIf RbtnMulti.Checked Then
+            num1 = TbNum1.Text
+            num2 = TbnNum2.Text
+            RadioTotal = num1 * num2
+            RbResultado.Text = Format(Math.Round(RadioTotal, 2), "###,##0.#0")
+        ElseIf RbtnDivision.Checked Then
+            num1 = TbNum1.Text
+            num2 = TbnNum2.Text
+            RadioTotal = num1 / num2
+            RbResultado.Text = Format(Math.Round(RadioTotal, 2), "###,##0.#0")
+        ElseIf RbtnResiduo.Checked Then
+            num1 = TbNum1.Text
+            num2 = TbnNum2.Text
+            RadioTotal = num1 Mod num2
+            RbResultado.Text = Format(Math.Round(RadioTotal, 2), "###,##0.#0")
+        End If
+    End Sub
+
     Private Sub BtnPag2_Click(sender As Object, e As EventArgs) Handles BtnPag2.Click
         Dim f As New Pagina2()
         f.ShowDialog()
 
+    End Sub
+
+    Private Sub RbtLimpiar_Click(sender As Object, e As EventArgs) Handles RbtLimpiar.Click
+        TbNum1.Clear()
+        TbnNum2.Clear()
+        RbResultado.Text() = " "
     End Sub
 End Class

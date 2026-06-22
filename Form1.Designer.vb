@@ -63,10 +63,26 @@ Partial Class Form1
         Label6 = New Label()
         FooterPanel = New Panel()
         BtnPag2 = New Button()
+        Panel3 = New Panel()
+        RbtnCalcular = New Button()
+        RbtLimpiar = New Button()
+        RbResultado = New Label()
+        GroupBox2 = New GroupBox()
+        RbtnResiduo = New RadioButton()
+        RbtnDivision = New RadioButton()
+        RbtnMulti = New RadioButton()
+        RbtnResta = New RadioButton()
+        RbtnSuma = New RadioButton()
+        TbnNum2 = New TextBox()
+        TbNum1 = New TextBox()
+        Label15 = New Label()
+        Label14 = New Label()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         GroupBox1.SuspendLayout()
         FooterPanel.SuspendLayout()
+        Panel3.SuspendLayout()
+        GroupBox2.SuspendLayout()
         SuspendLayout()
         ' 
         ' Button1
@@ -295,7 +311,7 @@ Partial Class Form1
         GroupBox1.Controls.Add(Label8)
         GroupBox1.Location = New Point(0, 142)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(498, 322)
+        GroupBox1.Size = New Size(478, 322)
         GroupBox1.TabIndex = 21
         GroupBox1.TabStop = False
         GroupBox1.Text = "Salario"
@@ -499,12 +515,169 @@ Partial Class Form1
         BtnPag2.Text = "Pagina 2"
         BtnPag2.UseVisualStyleBackColor = True
         ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.MistyRose
+        Panel3.Controls.Add(RbtnCalcular)
+        Panel3.Controls.Add(RbtLimpiar)
+        Panel3.Controls.Add(RbResultado)
+        Panel3.Controls.Add(GroupBox2)
+        Panel3.Controls.Add(TbnNum2)
+        Panel3.Controls.Add(TbNum1)
+        Panel3.Controls.Add(Label15)
+        Panel3.Controls.Add(Label14)
+        Panel3.Location = New Point(497, 274)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(538, 464)
+        Panel3.TabIndex = 18
+        ' 
+        ' RbtnCalcular
+        ' 
+        RbtnCalcular.Font = New Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        RbtnCalcular.ForeColor = Color.DarkRed
+        RbtnCalcular.Location = New Point(393, 332)
+        RbtnCalcular.Name = "RbtnCalcular"
+        RbtnCalcular.Size = New Size(103, 41)
+        RbtnCalcular.TabIndex = 7
+        RbtnCalcular.Text = "Calcular"
+        RbtnCalcular.UseVisualStyleBackColor = True
+        ' 
+        ' RbtLimpiar
+        ' 
+        RbtLimpiar.ForeColor = Color.DarkRed
+        RbtLimpiar.Location = New Point(44, 344)
+        RbtLimpiar.Name = "RbtLimpiar"
+        RbtLimpiar.Size = New Size(94, 29)
+        RbtLimpiar.TabIndex = 6
+        RbtLimpiar.Text = "Limpiar"
+        RbtLimpiar.UseVisualStyleBackColor = True
+        ' 
+        ' RbResultado
+        ' 
+        RbResultado.AutoSize = True
+        RbResultado.ForeColor = SystemColors.ActiveCaptionText
+        RbResultado.Location = New Point(170, 184)
+        RbResultado.Name = "RbResultado"
+        RbResultado.Size = New Size(0, 20)
+        RbResultado.TabIndex = 5
+        ' 
+        ' GroupBox2
+        ' 
+        GroupBox2.BackColor = Color.PeachPuff
+        GroupBox2.Controls.Add(RbtnResiduo)
+        GroupBox2.Controls.Add(RbtnDivision)
+        GroupBox2.Controls.Add(RbtnMulti)
+        GroupBox2.Controls.Add(RbtnResta)
+        GroupBox2.Controls.Add(RbtnSuma)
+        GroupBox2.Font = New Font("Trebuchet MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        GroupBox2.Location = New Point(350, 38)
+        GroupBox2.Name = "GroupBox2"
+        GroupBox2.Size = New Size(168, 253)
+        GroupBox2.TabIndex = 4
+        GroupBox2.TabStop = False
+        GroupBox2.Text = "Operaciones"
+        ' 
+        ' RbtnResiduo
+        ' 
+        RbtnResiduo.AutoSize = True
+        RbtnResiduo.ForeColor = SystemColors.ActiveCaptionText
+        RbtnResiduo.Location = New Point(17, 207)
+        RbtnResiduo.Name = "RbtnResiduo"
+        RbtnResiduo.Size = New Size(93, 27)
+        RbtnResiduo.TabIndex = 4
+        RbtnResiduo.TabStop = True
+        RbtnResiduo.Text = "Residuo"
+        RbtnResiduo.UseVisualStyleBackColor = True
+        ' 
+        ' RbtnDivision
+        ' 
+        RbtnDivision.AutoSize = True
+        RbtnDivision.ForeColor = SystemColors.ActiveCaptionText
+        RbtnDivision.Location = New Point(17, 165)
+        RbtnDivision.Name = "RbtnDivision"
+        RbtnDivision.Size = New Size(94, 27)
+        RbtnDivision.TabIndex = 3
+        RbtnDivision.TabStop = True
+        RbtnDivision.Text = "Division"
+        RbtnDivision.UseVisualStyleBackColor = True
+        ' 
+        ' RbtnMulti
+        ' 
+        RbtnMulti.AutoSize = True
+        RbtnMulti.ForeColor = SystemColors.ActiveCaptionText
+        RbtnMulti.Location = New Point(17, 125)
+        RbtnMulti.Name = "RbtnMulti"
+        RbtnMulti.Size = New Size(144, 27)
+        RbtnMulti.TabIndex = 2
+        RbtnMulti.TabStop = True
+        RbtnMulti.Text = "Multiplicacion"
+        RbtnMulti.UseVisualStyleBackColor = True
+        ' 
+        ' RbtnResta
+        ' 
+        RbtnResta.AutoSize = True
+        RbtnResta.ForeColor = SystemColors.ActiveCaptionText
+        RbtnResta.Location = New Point(17, 86)
+        RbtnResta.Name = "RbtnResta"
+        RbtnResta.Size = New Size(74, 27)
+        RbtnResta.TabIndex = 1
+        RbtnResta.TabStop = True
+        RbtnResta.Text = "Resta"
+        RbtnResta.UseVisualStyleBackColor = True
+        ' 
+        ' RbtnSuma
+        ' 
+        RbtnSuma.AutoSize = True
+        RbtnSuma.ForeColor = SystemColors.ActiveCaptionText
+        RbtnSuma.Location = New Point(17, 45)
+        RbtnSuma.Name = "RbtnSuma"
+        RbtnSuma.Size = New Size(74, 27)
+        RbtnSuma.TabIndex = 0
+        RbtnSuma.TabStop = True
+        RbtnSuma.Text = "Suma"
+        RbtnSuma.UseVisualStyleBackColor = True
+        ' 
+        ' TbnNum2
+        ' 
+        TbnNum2.Location = New Point(170, 110)
+        TbnNum2.Name = "TbnNum2"
+        TbnNum2.Size = New Size(150, 27)
+        TbnNum2.TabIndex = 3
+        ' 
+        ' TbNum1
+        ' 
+        TbNum1.Location = New Point(170, 63)
+        TbNum1.Name = "TbNum1"
+        TbNum1.Size = New Size(150, 27)
+        TbNum1.TabIndex = 2
+        ' 
+        ' Label15
+        ' 
+        Label15.AutoSize = True
+        Label15.ForeColor = SystemColors.ActiveCaptionText
+        Label15.Location = New Point(63, 110)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(75, 20)
+        Label15.TabIndex = 1
+        Label15.Text = "Numero 2"
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.ForeColor = SystemColors.ActiveCaptionText
+        Label14.Location = New Point(63, 63)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(75, 20)
+        Label14.TabIndex = 0
+        Label14.Text = "Numero 1"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonFace
         ClientSize = New Size(1036, 861)
+        Controls.Add(Panel3)
         Controls.Add(FooterPanel)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
@@ -524,6 +697,10 @@ Partial Class Form1
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
         FooterPanel.ResumeLayout(False)
+        Panel3.ResumeLayout(False)
+        Panel3.PerformLayout()
+        GroupBox2.ResumeLayout(False)
+        GroupBox2.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -569,5 +746,19 @@ Partial Class Form1
     Friend WithEvents Lnormal As Label
     Friend WithEvents FooterPanel As Panel
     Friend WithEvents BtnPag2 As Button
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents RbtnResta As RadioButton
+    Friend WithEvents RbtnSuma As RadioButton
+    Friend WithEvents TbnNum2 As TextBox
+    Friend WithEvents TbNum1 As TextBox
+    Friend WithEvents RbtnResiduo As RadioButton
+    Friend WithEvents RbtnDivision As RadioButton
+    Friend WithEvents RbtnMulti As RadioButton
+    Friend WithEvents RbResultado As Label
+    Friend WithEvents RbtLimpiar As Button
+    Friend WithEvents RbtnCalcular As Button
 
 End Class
