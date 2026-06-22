@@ -62,9 +62,11 @@ Partial Class Form1
         Label7 = New Label()
         Label6 = New Label()
         FooterPanel = New Panel()
+        BtnPag2 = New Button()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         GroupBox1.SuspendLayout()
+        FooterPanel.SuspendLayout()
         SuspendLayout()
         ' 
         ' Button1
@@ -479,11 +481,23 @@ Partial Class Form1
         ' FooterPanel
         ' 
         FooterPanel.BackColor = SystemColors.Info
+        FooterPanel.Controls.Add(BtnPag2)
         FooterPanel.Dock = DockStyle.Bottom
         FooterPanel.Location = New Point(0, 741)
         FooterPanel.Name = "FooterPanel"
         FooterPanel.Size = New Size(1036, 120)
         FooterPanel.TabIndex = 17
+        ' 
+        ' BtnPag2
+        ' 
+        BtnPag2.Font = New Font("Segoe UI Emoji", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        BtnPag2.ForeColor = Color.Black
+        BtnPag2.Location = New Point(136, 43)
+        BtnPag2.Name = "BtnPag2"
+        BtnPag2.Size = New Size(118, 40)
+        BtnPag2.TabIndex = 0
+        BtnPag2.Text = "Pagina 2"
+        BtnPag2.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
@@ -509,6 +523,7 @@ Partial Class Form1
         Panel2.PerformLayout()
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
+        FooterPanel.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -553,5 +568,6 @@ Partial Class Form1
     Friend WithEvents Ldoble As Label
     Friend WithEvents Lnormal As Label
     Friend WithEvents FooterPanel As Panel
+    Friend WithEvents BtnPag2 As Button
 
 End Class

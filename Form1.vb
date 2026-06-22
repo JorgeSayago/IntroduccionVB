@@ -211,4 +211,10 @@
 
 
     End Sub
+
+    Private Sub BtnPag2_Click(sender As Object, e As EventArgs) Handles BtnPag2.Click
+        Dim f As New Pagina2()
+        f.ShowDialog()
+
+    End Sub
 End Class
