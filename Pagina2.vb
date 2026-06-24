@@ -164,4 +164,23 @@
         num2 = 0
         resultado = 0
     End Sub
+
+    Private Sub BtnIniciar_Click(sender As Object, e As EventArgs) Handles BtnIniciar.Click
+        Dim contador As Integer = 0
+        Dim bandera As Integer = 1
+
+        If bandera = 1 Then
+            RichTextBox1.Text = ""
+            bandera = 0
+        End If
+
+        While (contador < TbxNumero.Text)
+            contador = (contador + 1)
+
+            RichTextBox1.Text = RichTextBox1.Text & "contador: " & contador & Environment.NewLine
+
+
+
+        End While
+    End Sub
 End Class

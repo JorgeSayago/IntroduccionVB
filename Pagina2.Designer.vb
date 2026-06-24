@@ -45,8 +45,14 @@ Partial Class Pagina2
         Btn2 = New Button()
         Btn1 = New Button()
         TxtCalculo = New TextBox()
+        Panel2 = New Panel()
+        BtnIniciar = New Button()
+        RichTextBox1 = New RichTextBox()
+        TbxNumero = New TextBox()
+        Label2 = New Label()
         PnlHeader.SuspendLayout()
         Panel1.SuspendLayout()
+        Panel2.SuspendLayout()
         SuspendLayout()
         ' 
         ' LblColor
@@ -293,11 +299,56 @@ Partial Class Pagina2
         TxtCalculo.TabIndex = 0
         TxtCalculo.TextAlign = HorizontalAlignment.Right
         ' 
+        ' Panel2
+        ' 
+        Panel2.Controls.Add(BtnIniciar)
+        Panel2.Controls.Add(RichTextBox1)
+        Panel2.Controls.Add(TbxNumero)
+        Panel2.Controls.Add(Label2)
+        Panel2.Location = New Point(394, 98)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(746, 390)
+        Panel2.TabIndex = 4
+        ' 
+        ' BtnIniciar
+        ' 
+        BtnIniciar.Location = New Point(436, 23)
+        BtnIniciar.Name = "BtnIniciar"
+        BtnIniciar.Size = New Size(94, 29)
+        BtnIniciar.TabIndex = 3
+        BtnIniciar.Text = "Iniciar"
+        BtnIniciar.UseVisualStyleBackColor = True
+        ' 
+        ' RichTextBox1
+        ' 
+        RichTextBox1.Location = New Point(201, 106)
+        RichTextBox1.Name = "RichTextBox1"
+        RichTextBox1.Size = New Size(253, 238)
+        RichTextBox1.TabIndex = 2
+        RichTextBox1.Text = ""
+        ' 
+        ' TbxNumero
+        ' 
+        TbxNumero.Location = New Point(265, 23)
+        TbxNumero.Name = "TbxNumero"
+        TbxNumero.Size = New Size(136, 27)
+        TbxNumero.TabIndex = 1
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(102, 27)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(138, 20)
+        Label2.TabIndex = 0
+        Label2.Text = "Escoge un numero: "
+        ' 
         ' Pagina2
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1140, 740)
+        Controls.Add(Panel2)
         Controls.Add(Panel1)
         Controls.Add(PnlHeader)
         Name = "Pagina2"
@@ -306,6 +357,8 @@ Partial Class Pagina2
         PnlHeader.PerformLayout()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -332,4 +385,9 @@ Partial Class Pagina2
     Friend WithEvents BtnPunto As Button
     Friend WithEvents BtnClean As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents BtnIniciar As Button
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents TbxNumero As TextBox
 End Class
