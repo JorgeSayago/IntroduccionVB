@@ -183,4 +183,31 @@
 
         End While
     End Sub
+
+    Dim num As Decimal
+
+    Private Sub BtnCalcular_Click(sender As Object, e As EventArgs) Handles BtnCalcular.Click
+        Dim contador2 As Integer = 1
+        Dim total As Decimal = 0
+
+        While (contador2 <= TbxCalcular.Text)
+            total = total + InputBox("Ingresa el dato numero: " & contador2)
+            contador2 += 1
+
+        End While
+
+        Label4.Visible = True
+        Label5.Visible = True
+        Label4.Text = Math.Round((total / TbxCalcular.Text), 3)
+        TbxCalcular.Enabled = False
+
+
+    End Sub
+
+    Private Sub BtnReiniciar_Click(sender As Object, e As EventArgs) Handles BtnReiniciar.Click
+        TbxCalcular.Enabled = True
+        TbxCalcular.Clear()
+        Label4.Text = ""
+        Label5.Visible = False
+    End Sub
 End Class
