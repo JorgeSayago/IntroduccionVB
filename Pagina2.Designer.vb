@@ -51,16 +51,24 @@ Partial Class Pagina2
         TbxNumero = New TextBox()
         Label2 = New Label()
         Panel3 = New Panel()
+        Label5 = New Label()
         BtnReiniciar = New Button()
         Label4 = New Label()
         BtnCalcular = New Button()
         TbxCalcular = New TextBox()
         Label3 = New Label()
-        Label5 = New Label()
+        Panel4 = New Panel()
+        Label8 = New Label()
+        BtnInicio = New Button()
+        TextBox2 = New TextBox()
+        TextBox1 = New TextBox()
+        Label7 = New Label()
+        Label6 = New Label()
         PnlHeader.SuspendLayout()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
+        Panel4.SuspendLayout()
         SuspendLayout()
         ' 
         ' LblColor
@@ -89,7 +97,7 @@ Partial Class Pagina2
         PnlHeader.Dock = DockStyle.Top
         PnlHeader.Location = New Point(0, 0)
         PnlHeader.Name = "PnlHeader"
-        PnlHeader.Size = New Size(1047, 98)
+        PnlHeader.Size = New Size(987, 98)
         PnlHeader.TabIndex = 2
         ' 
         ' Panel1
@@ -354,6 +362,7 @@ Partial Class Pagina2
         ' 
         ' Panel3
         ' 
+        Panel3.BackColor = SystemColors.Info
         Panel3.Controls.Add(Label5)
         Panel3.Controls.Add(BtnReiniciar)
         Panel3.Controls.Add(Label4)
@@ -362,8 +371,19 @@ Partial Class Pagina2
         Panel3.Controls.Add(Label3)
         Panel3.Location = New Point(0, 512)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(454, 480)
+        Panel3.Size = New Size(418, 203)
         Panel3.TabIndex = 5
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(64, 86)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(99, 20)
+        Label5.TabIndex = 5
+        Label5.Text = "La media es: "
+        Label5.Visible = False
         ' 
         ' BtnReiniciar
         ' 
@@ -410,22 +430,79 @@ Partial Class Pagina2
         Label3.TabIndex = 0
         Label3.Text = "Numero de Datos: "
         ' 
-        ' Label5
+        ' Panel4
         ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(64, 86)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(99, 20)
-        Label5.TabIndex = 5
-        Label5.Text = "La media es: "
-        Label5.Visible = False
+        Panel4.BackColor = SystemColors.ActiveCaption
+        Panel4.Controls.Add(Label8)
+        Panel4.Controls.Add(BtnInicio)
+        Panel4.Controls.Add(TextBox2)
+        Panel4.Controls.Add(TextBox1)
+        Panel4.Controls.Add(Label7)
+        Panel4.Controls.Add(Label6)
+        Panel4.Location = New Point(418, 512)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(629, 203)
+        Panel4.TabIndex = 6
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.Location = New Point(28, 13)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(403, 80)
+        Label8.TabIndex = 5
+        Label8.Text = "Inserta 2 numeros con las siguientes caracteristicas:" & vbCrLf & vbCrLf & "- Los 2 numeros deben ser diferentes" & vbCrLf & "- El primer numero tiene que ser menor que el numero 2"
+        ' 
+        ' BtnInicio
+        ' 
+        BtnInicio.BackColor = SystemColors.ButtonHighlight
+        BtnInicio.FlatStyle = FlatStyle.Flat
+        BtnInicio.Location = New Point(400, 132)
+        BtnInicio.Name = "BtnInicio"
+        BtnInicio.Size = New Size(94, 29)
+        BtnInicio.TabIndex = 4
+        BtnInicio.Text = "Iniciar"
+        BtnInicio.UseVisualStyleBackColor = False
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Location = New Point(181, 161)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(125, 27)
+        TextBox2.TabIndex = 3
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Location = New Point(181, 118)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(125, 27)
+        TextBox1.TabIndex = 2
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Location = New Point(72, 161)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(82, 20)
+        Label7.TabIndex = 1
+        Label7.Text = "Numero 2: "
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Location = New Point(72, 118)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(82, 20)
+        Label6.TabIndex = 0
+        Label6.Text = "Numero 1: "
         ' 
         ' Pagina2
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1047, 991)
+        ClientSize = New Size(987, 991)
+        Controls.Add(Panel4)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
@@ -440,6 +517,8 @@ Partial Class Pagina2
         Panel2.PerformLayout()
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
+        Panel4.ResumeLayout(False)
+        Panel4.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -478,4 +557,11 @@ Partial Class Pagina2
     Friend WithEvents TbxCalcular As TextBox
     Friend WithEvents BtnReiniciar As Button
     Friend WithEvents Label5 As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents BtnInicio As Button
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
 End Class

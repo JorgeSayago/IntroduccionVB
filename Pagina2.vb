@@ -200,14 +200,52 @@
         Label5.Visible = True
         Label4.Text = Math.Round((total / TbxCalcular.Text), 3)
         TbxCalcular.Enabled = False
+        BtnCalcular.Enabled = False
 
 
     End Sub
 
     Private Sub BtnReiniciar_Click(sender As Object, e As EventArgs) Handles BtnReiniciar.Click
         TbxCalcular.Enabled = True
+        BtnCalcular.Enabled = True
         TbxCalcular.Clear()
         Label4.Text = ""
         Label5.Visible = False
+    End Sub
+
+    Private Sub BtnInicio_Click(sender As Object, e As EventArgs) Handles BtnInicio.Click
+        Dim valor As Decimal
+
+        If TextBox1.Text() <> "" Then
+            If TextBox2.Text() <> "" Then
+                If Val(TextBox1.Text) < Val(TextBox2.Text) Then
+
+                    Do
+                        valor = Val(InputBox("Inserte un numero entre el numero " & Val(TextBox1.Text) & " y el numero " & Val(TextBox2.Text)))
+
+                    Loop While (valor < Val(TextBox1.Text) Or valor > Val(TextBox2.Text))
+                    MsgBox(" Valor Correcto ")
+                    TextBox1.Clear()
+                    TextBox2.Clear()
+
+
+
+                Else
+                    MsgBox("El numero 1 no es menor que el numero 2")
+                    TextBox1.Clear()
+                    TextBox1.Focus()
+
+                End If
+
+            Else
+                MsgBox("Debe insertar el numero 2")
+                TextBox2.Focus()
+            End If
+
+        Else
+            MsgBox(" Debe insertar un numero 1")
+            TextBox1.Focus()
+
+        End If
     End Sub
 End Class
