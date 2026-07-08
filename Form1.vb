@@ -251,4 +251,9 @@
         TbnNum2.Clear()
         RbResultado.Text() = " "
     End Sub
+
+    Private Sub BtnPag3_Click(sender As Object, e As EventArgs) Handles BtnPag3.Click
+        Dim f As New Pagina3()
+        f.ShowDialog()
+    End Sub
 End Class

@@ -97,7 +97,7 @@ Partial Class Pagina2
         PnlHeader.Dock = DockStyle.Top
         PnlHeader.Location = New Point(0, 0)
         PnlHeader.Name = "PnlHeader"
-        PnlHeader.Size = New Size(987, 98)
+        PnlHeader.Size = New Size(1035, 98)
         PnlHeader.TabIndex = 2
         ' 
         ' Panel1
@@ -371,14 +371,14 @@ Partial Class Pagina2
         Panel3.Controls.Add(Label3)
         Panel3.Location = New Point(0, 512)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(418, 203)
+        Panel3.Size = New Size(418, 240)
         Panel3.TabIndex = 5
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(64, 86)
+        Label5.Location = New Point(77, 99)
         Label5.Name = "Label5"
         Label5.Size = New Size(99, 20)
         Label5.TabIndex = 5
@@ -387,7 +387,7 @@ Partial Class Pagina2
         ' 
         ' BtnReiniciar
         ' 
-        BtnReiniciar.Location = New Point(99, 118)
+        BtnReiniciar.Location = New Point(112, 131)
         BtnReiniciar.Name = "BtnReiniciar"
         BtnReiniciar.Size = New Size(94, 29)
         BtnReiniciar.TabIndex = 4
@@ -397,7 +397,7 @@ Partial Class Pagina2
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(165, 86)
+        Label4.Location = New Point(178, 99)
         Label4.Name = "Label4"
         Label4.Size = New Size(53, 20)
         Label4.TabIndex = 3
@@ -441,7 +441,7 @@ Partial Class Pagina2
         Panel4.Controls.Add(Label6)
         Panel4.Location = New Point(418, 512)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(629, 203)
+        Panel4.Size = New Size(629, 240)
         Panel4.TabIndex = 6
         ' 
         ' Label8
@@ -501,7 +501,7 @@ Partial Class Pagina2
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(987, 991)
+        ClientSize = New Size(1035, 742)
         Controls.Add(Panel4)
         Controls.Add(Panel3)
         Controls.Add(Panel2)

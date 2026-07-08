@@ -77,6 +77,7 @@ Partial Class Form1
         TbNum1 = New TextBox()
         Label15 = New Label()
         Label14 = New Label()
+        BtnPag3 = New Button()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         GroupBox1.SuspendLayout()
@@ -497,6 +498,7 @@ Partial Class Form1
         ' FooterPanel
         ' 
         FooterPanel.BackColor = SystemColors.Info
+        FooterPanel.Controls.Add(BtnPag3)
         FooterPanel.Controls.Add(BtnPag2)
         FooterPanel.Dock = DockStyle.Bottom
         FooterPanel.Location = New Point(0, 741)
@@ -508,7 +510,7 @@ Partial Class Form1
         ' 
         BtnPag2.Font = New Font("Segoe UI Emoji", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         BtnPag2.ForeColor = Color.Black
-        BtnPag2.Location = New Point(136, 43)
+        BtnPag2.Location = New Point(126, 43)
         BtnPag2.Name = "BtnPag2"
         BtnPag2.Size = New Size(118, 40)
         BtnPag2.TabIndex = 0
@@ -671,6 +673,17 @@ Partial Class Form1
         Label14.TabIndex = 0
         Label14.Text = "Numero 1"
         ' 
+        ' BtnPag3
+        ' 
+        BtnPag3.Font = New Font("Segoe UI Emoji", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        BtnPag3.ForeColor = Color.Black
+        BtnPag3.Location = New Point(315, 43)
+        BtnPag3.Name = "BtnPag3"
+        BtnPag3.Size = New Size(118, 40)
+        BtnPag3.TabIndex = 1
+        BtnPag3.Text = "Pagina 3"
+        BtnPag3.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -760,5 +773,6 @@ Partial Class Form1
     Friend WithEvents RbResultado As Label
     Friend WithEvents RbtLimpiar As Button
     Friend WithEvents RbtnCalcular As Button
+    Friend WithEvents BtnPag3 As Button
 
 End Class
