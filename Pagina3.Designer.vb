@@ -28,7 +28,14 @@ Partial Class Pagina3
         BtnEje1 = New Button()
         TxtNum = New TextBox()
         Label1 = New Label()
+        GroupBox1 = New GroupBox()
+        BtnLimpiar2 = New Button()
+        RTbxEjercicio2 = New RichTextBox()
+        BtnEje2Iniciar = New Button()
+        TbxNumEje2 = New TextBox()
+        Label2 = New Label()
         Panel1.SuspendLayout()
+        GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
@@ -40,7 +47,7 @@ Partial Class Pagina3
         Panel1.Controls.Add(Label1)
         Panel1.Location = New Point(1, -1)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(484, 353)
+        Panel1.Size = New Size(501, 349)
         Panel1.TabIndex = 0
         ' 
         ' BtnEje1Limpiar
@@ -62,7 +69,7 @@ Partial Class Pagina3
         ' 
         ' BtnEje1
         ' 
-        BtnEje1.Location = New Point(376, 29)
+        BtnEje1.Location = New Point(349, 27)
         BtnEje1.Name = "BtnEje1"
         BtnEje1.Size = New Size(94, 29)
         BtnEje1.TabIndex = 2
@@ -71,7 +78,7 @@ Partial Class Pagina3
         ' 
         ' TxtNum
         ' 
-        TxtNum.Location = New Point(209, 29)
+        TxtNum.Location = New Point(199, 28)
         TxtNum.Name = "TxtNum"
         TxtNum.Size = New Size(125, 27)
         TxtNum.TabIndex = 1
@@ -86,16 +93,78 @@ Partial Class Pagina3
         Label1.TabIndex = 0
         Label1.Text = "Escriba un numero: "
         ' 
+        ' GroupBox1
+        ' 
+        GroupBox1.BackgroundImage = My.Resources.Resources.findi
+        GroupBox1.Controls.Add(BtnLimpiar2)
+        GroupBox1.Controls.Add(RTbxEjercicio2)
+        GroupBox1.Controls.Add(BtnEje2Iniciar)
+        GroupBox1.Controls.Add(TbxNumEje2)
+        GroupBox1.Controls.Add(Label2)
+        GroupBox1.Font = New Font("Yu Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        GroupBox1.Location = New Point(508, -1)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Size = New Size(518, 349)
+        GroupBox1.TabIndex = 1
+        GroupBox1.TabStop = False
+        GroupBox1.Text = "Contador"
+        ' 
+        ' BtnLimpiar2
+        ' 
+        BtnLimpiar2.Location = New Point(407, 296)
+        BtnLimpiar2.Name = "BtnLimpiar2"
+        BtnLimpiar2.Size = New Size(94, 29)
+        BtnLimpiar2.TabIndex = 5
+        BtnLimpiar2.Text = "Limpiar"
+        BtnLimpiar2.UseVisualStyleBackColor = True
+        ' 
+        ' RTbxEjercicio2
+        ' 
+        RTbxEjercicio2.Location = New Point(153, 110)
+        RTbxEjercicio2.Name = "RTbxEjercicio2"
+        RTbxEjercicio2.Size = New Size(211, 176)
+        RTbxEjercicio2.TabIndex = 5
+        RTbxEjercicio2.Text = ""
+        ' 
+        ' BtnEje2Iniciar
+        ' 
+        BtnEje2Iniciar.Location = New Point(371, 48)
+        BtnEje2Iniciar.Name = "BtnEje2Iniciar"
+        BtnEje2Iniciar.Size = New Size(94, 29)
+        BtnEje2Iniciar.TabIndex = 2
+        BtnEje2Iniciar.Text = "Iniciar"
+        BtnEje2Iniciar.UseVisualStyleBackColor = True
+        ' 
+        ' TbxNumEje2
+        ' 
+        TbxNumEje2.Location = New Point(210, 47)
+        TbxNumEje2.Name = "TbxNumEje2"
+        TbxNumEje2.Size = New Size(125, 35)
+        TbxNumEje2.TabIndex = 1
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Yu Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(18, 49)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(173, 22)
+        Label2.TabIndex = 0
+        Label2.Text = "Ingrese un numero:"
+        ' 
         ' Pagina3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(922, 725)
+        ClientSize = New Size(1030, 725)
+        Controls.Add(GroupBox1)
         Controls.Add(Panel1)
         Name = "Pagina3"
         Text = "Pagina3"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        GroupBox1.ResumeLayout(False)
+        GroupBox1.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -105,4 +174,10 @@ Partial Class Pagina3
     Friend WithEvents TxtNum As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents BtnEje1Limpiar As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents RTbxEjercicio2 As RichTextBox
+    Friend WithEvents BtnEje2Iniciar As Button
+    Friend WithEvents TbxNumEje2 As TextBox
+    Friend WithEvents BtnLimpiar2 As Button
 End Class
