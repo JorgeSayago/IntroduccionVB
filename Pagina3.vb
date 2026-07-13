@@ -78,4 +78,28 @@ Public Class Pagina3
             MsgBox(" Por Favor no deje el campo vacio")
         End If
     End Sub
+
+    Private Sub BtnAniadir_Click(sender As Object, e As EventArgs) Handles BtnAniadir.Click
+        Dim nombre As String
+
+        nombre = TxtAniadir.Text
+        ListBox1.Items.Add(nombre)
+        TxtAniadir.Clear()
+
+    End Sub
+
+    Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
+        Dim nombre As String
+        nombre = ListBox1.SelectedItem
+        ListBox2.Items.Add(nombre)
+        ListBox1.Items.Remove(nombre)
+
+    End Sub
+
+    Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
+        Dim nombre As String
+        nombre = ListBox2.SelectedItem
+        ListBox1.Items.Add(nombre)
+        ListBox2.Items.Remove(nombre)
+    End Sub
 End Class
