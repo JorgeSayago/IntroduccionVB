@@ -53,8 +53,29 @@ Public Class Pagina3
     End Sub
 
     Private Sub BtnLimpiar2_Click(sender As Object, e As EventArgs) Handles BtnLimpiar2.Click
-        TbxNumEje2.Clear()
-        RTbxEjercicio2.Clear()
+        TbxNumEje2.Clear
+        RTbxEjercicio2.Clear
 
+    End Sub
+
+    Private Sub BtnIniIncremento_Click(sender As Object, e As EventArgs) Handles BtnIniIncremento.Click
+        Dim contador, ciclo As Integer
+        ciclo = 1
+        If TxtNumInc.Text <> "" Then
+            If TxtIncremento.Text <> "" Then
+                RichTextBox2.Clear()
+
+                For contador = 0 To Val(TxtNumInc.Text) Step Val(TxtIncremento.Text)
+                    RichTextBox2.Text = RichTextBox2.Text & "contador: " & contador & " ciclo: " & ciclo & Environment.NewLine
+                    ciclo += 1
+                Next
+            Else
+                MsgBox("Ingrese un numero en el campo incremento")
+                TxtIncremento.Focus()
+            End If
+
+        Else
+            MsgBox(" Por Favor no deje el campo vacio")
+        End If
     End Sub
 End Class
