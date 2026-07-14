@@ -102,4 +102,32 @@ Public Class Pagina3
         ListBox1.Items.Add(nombre)
         ListBox2.Items.Remove(nombre)
     End Sub
+
+    Private Sub BtnAgregarTodo_Click(sender As Object, e As EventArgs) Handles BtnAgregarTodo.Click
+        Dim nombre As String
+        Dim contador As Integer
+        Dim valor = ListBox1.Items.Count
+
+        For contador = 0 To valor - 1
+
+            nombre = ListBox1.Items(0)
+            ListBox2.Items.Add(nombre)
+            ListBox1.Items.Remove(nombre)
+
+        Next
+    End Sub
+
+    Private Sub BtnRegresarTodo_Click(sender As Object, e As EventArgs) Handles BtnRegresarTodo.Click
+        Dim nombre As String
+        Dim contador As Integer
+
+        Dim valor = ListBox2.Items.Count
+
+        For contador = 0 To valor - 1
+            nombre = ListBox2.Items(0)
+            ListBox1.Items.Add(nombre)
+            ListBox2.Items.Remove(nombre)
+        Next
+
+    End Sub
 End Class
