@@ -90,17 +90,29 @@ Public Class Pagina3
 
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
         Dim nombre As String
-        nombre = ListBox1.SelectedItem
-        ListBox2.Items.Add(nombre)
-        ListBox1.Items.Remove(nombre)
+        If ListBox1.SelectedItems.Count = 1 Then
+            nombre = ListBox1.SelectedItem
+            ListBox2.Items.Add(nombre)
+            ListBox1.Items.Remove(nombre)
+        Else
+            MsgBox("Por favor seleccione un valor valido")
+        End If
+
 
     End Sub
 
     Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
         Dim nombre As String
-        nombre = ListBox2.SelectedItem
-        ListBox1.Items.Add(nombre)
-        ListBox2.Items.Remove(nombre)
+
+        If ListBox2.SelectedItems.Count = 1 Then
+            nombre = ListBox2.SelectedItem
+            ListBox1.Items.Add(nombre)
+            ListBox2.Items.Remove(nombre)
+
+        Else
+            MsgBox("Por favor seleccione un valor valido")
+        End If
+
     End Sub
 
     Private Sub BtnAgregarTodo_Click(sender As Object, e As EventArgs) Handles BtnAgregarTodo.Click
@@ -129,5 +141,24 @@ Public Class Pagina3
             ListBox2.Items.Remove(nombre)
         Next
 
+    End Sub
+
+    Private Sub actualizas()
+        Label6.Text = "Indice: " & ListBox1.SelectedIndex
+        Label7.Text = "Nombre: " & ListBox1.SelectedItem
+        Label8.Text = "Elementos: " & ListBox1.Items.Count
+
+        Label9.Text = "Indice: " & ListBox2.SelectedIndex
+        Label10.Text = "Nombre: " & ListBox2.SelectedItem
+        Label11.Text = "Elementos: " & ListBox2.Items.Count
+
+    End Sub
+
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
+        actualizas()
+    End Sub
+
+    Private Sub ListBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox2.SelectedIndexChanged
+        actualizas()
     End Sub
 End Class

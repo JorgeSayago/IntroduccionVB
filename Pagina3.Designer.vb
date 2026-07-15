@@ -323,7 +323,7 @@ Partial Class Pagina3
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Location = New Point(10, 114)
+        Label9.Location = New Point(10, 39)
         Label9.Name = "Label9"
         Label9.Size = New Size(59, 20)
         Label9.TabIndex = 2
@@ -341,7 +341,7 @@ Partial Class Pagina3
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Location = New Point(10, 39)
+        Label11.Location = New Point(10, 114)
         Label11.Name = "Label11"
         Label11.Size = New Size(68, 20)
         Label11.TabIndex = 0
