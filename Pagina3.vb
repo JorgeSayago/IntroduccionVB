@@ -161,4 +161,42 @@ Public Class Pagina3
     Private Sub ListBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox2.SelectedIndexChanged
         actualizas()
     End Sub
+
+    Private Sub BtnDelete1_Click(sender As Object, e As EventArgs) Handles BtnDelete1.Click
+        Dim nombre As String
+
+        nombre = ListBox1.SelectedItem
+        ListBox1.Items.Remove(nombre)
+    End Sub
+
+    Private Sub BtnDelete2_Click(sender As Object, e As EventArgs) Handles BtnDelete2.Click
+        Dim nombre As String
+        nombre = ListBox2.SelectedItem
+        ListBox2.Items.Remove(nombre)
+    End Sub
+
+    Private Sub BtnDeleteAll1_Click(sender As Object, e As EventArgs) Handles BtnDeleteAll1.Click
+        Dim nombre As String
+        Dim contador As Integer
+        Dim valor = ListBox1.Items.Count
+
+        For contador = 0 To valor - 1
+            nombre = ListBox1.Items(0)
+            ListBox1.Items.Remove(nombre)
+        Next
+
+
+
+    End Sub
+
+    Private Sub BtnDeleteAll2_Click(sender As Object, e As EventArgs) Handles BtnDeleteAll2.Click
+        Dim nombre As String
+        Dim contador As Integer
+        Dim valor = ListBox2.Items.Count
+
+        For contador = 0 To valor - 1
+            nombre = ListBox2.Items(0)
+            ListBox2.Items.Remove(nombre)
+        Next
+    End Sub
 End Class
